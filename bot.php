@@ -26,18 +26,22 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			//$messages = ['type' => 'text','text' => ''];
 
+	
   if($event['message']['text'] == 'สวัสดี'){
-  $messages = ['type' => 'text','text' => 'สวัสดี'];	  
-$messages1= ['type' => 'text','text' => 'ยินดีต้อนรับ่มิติใหม่'];	   
-	  
+  $messages = ['type' => 'text','text' => 'สวัสดี'];	
+	   $messages1 = ['type' => 'text','text' => 'Test'];
 }else if($event['message']['text']== 'ชื่ออะไร'){
-
+	 
     $messages = ['type' => 'text','text' => 'ฉันยังไม่มีชื่อนะ'];
-	  $messages1= ['type' => 'text','text' => ''];	
+	    $messages1 = ['type' => 'text','text' => 'Test'];
 }else if($event['message']['text'] == 'ทำอะไรได้บ้าง'){
-   $messages = ['type' => 'text','text' => 'ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ']; 
-	  $messages1= ['type' => 'text','text' => ''];	
-}else{$messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ']; $messages1= ['type' => 'text','text' => ''	 }
+   $messages = ['type' => 'text','text' => 'ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ']; 	 
+	    $messages1 = ['type' => 'text','text' => 'Test'];
+}else{$messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ']; 
+       $messages1 = ['type' => 'text','text' => 'Test'];
+     }
+	
+			
     
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
