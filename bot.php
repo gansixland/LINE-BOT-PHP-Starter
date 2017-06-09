@@ -33,9 +33,11 @@ $messages1= ['type' => 'text','text' => 'ยินดีต้อนรับ่
 }else if($event['message']['text']== 'ชื่ออะไร'){
 
     $messages = ['type' => 'text','text' => 'ฉันยังไม่มีชื่อนะ'];
+	  $messages1= ['type' => 'text','text' => ''];	
 }else if($event['message']['text'] == 'ทำอะไรได้บ้าง'){
    $messages = ['type' => 'text','text' => 'ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ']; 
-}else{$messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ'];  }
+	  $messages1= ['type' => 'text','text' => ''];	
+}else{$messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ']; $messages1= ['type' => 'text','text' => ''	 }
     
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
