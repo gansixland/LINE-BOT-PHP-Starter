@@ -27,8 +27,7 @@ if (!is_null($events['events'])) {
     $messages = ['type' => 'text','text' => 'ฉันยังไม่มีชื่อนะ'];
 }else if($event['message']['text'] == 'ทำอะไรได้บ้าง'){
    $messages = ['type' => 'text','text' => 'ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ']; 
-}else{
-   $messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ']; 
+}else{$messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ'];  }
     
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
