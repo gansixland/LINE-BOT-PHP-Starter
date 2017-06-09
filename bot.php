@@ -1,3 +1,9 @@
+<html>  
+<head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+	<body>
 <?php
 $access_token = 'dF9FzccBxm3nZ8x4EEvyuccuNsOcA9Y9j2rglwhxrnsk7rFnM1ZySJ4cmK10YJ9Ziumj2l13xncHwW8g7ea/6z8BarkehtJHKMDWmHKrKkyHMwWxqscJhUJ3WQHX7N+fG6C3KFl5S13x9lOOCNNSswdB04t89/1O/w1cDnyilFU=';
 
@@ -21,10 +27,8 @@ if (!is_null($events['events'])) {
 			//$messages = ['type' => 'text','text' => ''];
 
   if($event['message']['text'] == 'สวัสดี'){
-  $messages = ['type' => 'text','text' => 'สวัสดี'];
-	  
-$messages1= ['type' => 'text','text' => 'ยินดีต้อนรับ่มิติใหม่'];	  
-	 
+  $messages = ['type' => 'text','text' => 'สวัสดี'];	  
+$messages1= ['type' => 'text','text' => 'ยินดีต้อนรับ่มิติใหม่'];	   
 	  
 }else if($event['message']['text']== 'ชื่ออะไร'){
 
@@ -56,3 +60,5 @@ $messages1= ['type' => 'text','text' => 'ยินดีต้อนรับ่
 	}
 }
 echo "OK";
+		 </body>
+</html>
