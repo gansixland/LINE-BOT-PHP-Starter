@@ -21,7 +21,10 @@ if (!is_null($events['events'])) {
 			//$messages = ['type' => 'text','text' => ''];
 
   if($event['message']['text'] == 'สวัสดี'){
-  $messages = ['type' => 'text','text' => 'สวัสดี'];
+  $messages = ['type' => 'text','text' => 'สวัสดี','type' => 'text','text' => 'ยินดีต้อนรับ่มิติใหม่'];
+	  
+	 
+	  
 }else if($event['message']['text']== 'ชื่ออะไร'){
 
     $messages = ['type' => 'text','text' => 'ฉันยังไม่มีชื่อนะ'];
