@@ -21,14 +21,7 @@ if (!is_null($events['events'])) {
 			$messages = ['type' => 'text','text' => $text];
 
                         if($event['message']['text'] == 'สวัสดี'){
-  $messages = ['type' => 'text','text' => 'สวัสดี'];
-}else if($event['message']['text']== 'ชื่ออะไร'){
-
-    $messages = ['type' => 'text','text' => 'ฉันยังไม่มีชื่อนะ'];
-}else if($event['message']['text'] == 'ทำอะไรได้บ้าง'){
-   $messages = ['type' => 'text','text' => 'ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ']; 
-}else{
-   $messages = ['type' => 'text','text' => 'ฉันไม่เข้าใจ']; 
+  $messages = ['type' => 'text','text' => $text='สวัสดี'];
 }
     
 			// Make a POST Request to Messaging API to reply to sender
