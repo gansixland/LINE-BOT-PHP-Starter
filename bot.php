@@ -60,5 +60,6 @@ $messages1= ['type' => 'text','text' => 'ยินดีต้อนรับ่
 	}
 }
 echo "OK";
-		 </body>
+?>
+			 </body>
 </html>
