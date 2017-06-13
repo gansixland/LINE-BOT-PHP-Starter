@@ -10,7 +10,9 @@ $strAccessToken = "dF9FzccBxm3nZ8x4EEvyuccuNsOcA9Y9j2rglwhxrnsk7rFnM1ZySJ4cmK10Y
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
- 
+	    	 
+if (!is_null($arrJson['events'])) {
+	
 $strUrl = "https://api.line.me/v2/bot/message/reply";
  
 $arrHeader = array();
@@ -24,17 +26,17 @@ if(similar_text("สวัสดี",$arrJson['events'][0]['message']['text']) )
  // $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 	$arrPostData['messages'][0]['text'] = "สวัสดี คุณชื่ออะไรเหรอ ?";
 }
-else if(similar_text($arrJson['events'][0]['message']['text'],"ชื่ออะไร")){
+else if(similar_text("ชื่ออะไร",$arrJson['events'][0]['message']['text'])){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สงกรานต์ไงไม่รู้จักเหรอ Thevoice Umm ยินที่ได้รู้จักนะ";
-}else if(similar_text($arrJson['events'][0]['message']['text'] ,"ทำอะไรได้บ้าง")){
+}else if(similar_text("ทำอะไรได้บ้าง",$arrJson['events'][0]['message']['text'] )){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else if(similar_text($arrJson['events'][0]['message']['text'] ,"ดี")){
+}else if(similar_text("ดี",$arrJson['events'][0]['message']['text'] )){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -61,7 +63,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
- 
+}
+echo "OK"; 
 ?>
     </body>
 </html>
