@@ -19,7 +19,7 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if(similar_text("สวัสดี",$arrJson['events'][0]['message']['text'])==true ){
+if(similar_text($arrJson['events'][0]['message']['text'],"สวัสดี")==true ){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
