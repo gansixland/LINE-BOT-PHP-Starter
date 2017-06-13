@@ -29,12 +29,12 @@ else if(similar_text($arrJson['events'][0]['message']['text'],"ชื่ออ�
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สงกรานต์ไงไม่รู้จักเหรอ Thevoice Umm ยินที่ได้รู้จักนะ";
-}else if(similar_text($arrJson['events'][0]['message']['text'] ,"ทำอะไรได้บ้าง"){
+}else if(similar_text($arrJson['events'][0]['message']['text'] ,"ทำอะไรได้บ้าง")){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else if(similar_text($arrJson['events'][0]['message']['text'] ,"ดี"){
+}else if(similar_text($arrJson['events'][0]['message']['text'] ,"ดี")){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
