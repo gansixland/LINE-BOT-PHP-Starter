@@ -27,6 +27,7 @@ if(similar_text($arrJson['events'][0]['message']['text'],"สวัสดี",$p
 	$arrPostData['messages'][0]['text'] = "สวัสดี คุณชื่ออะไรเหรอ ?";
 	echo $percent; 
 }
+	echo $percent; 
 // else if(similar_text($arrJson['events'][0]['message']['text'],"ชื่ออะไร",$percent)>50){
 //   $arrPostData = array();
 //   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
