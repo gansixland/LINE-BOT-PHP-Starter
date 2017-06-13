@@ -25,32 +25,33 @@ if(similar_text($arrJson['events'][0]['message']['text'],"สวัสดี",$p
   $arrPostData['messages'][0]['type'] = "text";
  // $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 	$arrPostData['messages'][0]['text'] = "สวัสดี คุณชื่ออะไรเหรอ ?";
+	echo $percent; 
 }
-else if(similar_text($arrJson['events'][0]['message']['text'],"ชื่ออะไร",$percent)>50){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สงกรานต์ไงไม่รู้จักเหรอ Thevoice Umm ยินที่ได้รู้จักนะ";
-}else if(similar_text($arrJson['events'][0]['message']['text'],"ทำอะไรได้บ้าง",$percent)>50){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else if(similar_text($arrJson['events'][0]['message']['text'],"ดี" ,$percent)>50){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "จะดีไม่ดีจะบอกทำไมเนี่ย !!!!";
-}
+// else if(similar_text($arrJson['events'][0]['message']['text'],"ชื่ออะไร",$percent)>50){
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "สงกรานต์ไงไม่รู้จักเหรอ Thevoice Umm ยินที่ได้รู้จักนะ";
+// }else if(similar_text($arrJson['events'][0]['message']['text'],"ทำอะไรได้บ้าง",$percent)>50){
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+// }else if(similar_text($arrJson['events'][0]['message']['text'],"ดี" ,$percent)>50){
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "จะดีไม่ดีจะบอกทำไมเนี่ย !!!!";
+// }
 
-else{
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ไม่เข้าใจเทอพูดอะไรเหรอ";
- $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "ฉันเหนื่อยนะที่ต้องตอบคำถามคุณ";
-}
+// else{
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "ไม่เข้าใจเทอพูดอะไรเหรอ";
+//  $arrPostData['messages'][1]['type'] = "text";
+//   $arrPostData['messages'][1]['text'] = "ฉันเหนื่อยนะที่ต้องตอบคำถามคุณ";
+// }
  
  
 $ch = curl_init();
