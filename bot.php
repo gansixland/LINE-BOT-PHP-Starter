@@ -19,24 +19,24 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if(similar_text("สวัสดี",$arrJson['events'][0]['message']['text']) ){
+if(similar_text("สวัสดี",$arrJson['events'][0]['message']['text'])==true ){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
  // $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 	$arrPostData['messages'][0]['text'] = "สวัสดี คุณชื่ออะไรเหรอ ?";
 }
-else if(similar_text("ชื่ออะไร",$arrJson['events'][0]['message']['text'])){
+else if(similar_text("ชื่ออะไร",$arrJson['events'][0]['message']['text'])==true){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สงกรานต์ไงไม่รู้จักเหรอ Thevoice Umm ยินที่ได้รู้จักนะ";
-}else if(similar_text("ทำอะไรได้บ้าง",$arrJson['events'][0]['message']['text'] )){
+}else if(similar_text("ทำอะไรได้บ้าง",$arrJson['events'][0]['message']['text'] )==true){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else if(similar_text("ดี",$arrJson['events'][0]['message']['text'] )){
+}else if(similar_text("ดี",$arrJson['events'][0]['message']['text'] )==true){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
